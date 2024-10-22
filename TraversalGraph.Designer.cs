@@ -192,6 +192,7 @@
             this.tb1.Location = new System.Drawing.Point(798, 27);
             this.tb1.Multiline = true;
             this.tb1.Name = "tb1";
+            this.tb1.ReadOnly = true;
             this.tb1.Size = new System.Drawing.Size(337, 401);
             this.tb1.TabIndex = 2;
             // 
@@ -200,6 +201,7 @@
             this.pb1.Location = new System.Drawing.Point(397, 21);
             this.pb1.Name = "pb1";
             this.pb1.Size = new System.Drawing.Size(395, 401);
+            this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb1.TabIndex = 1;
             this.pb1.TabStop = false;
             // 
@@ -211,7 +213,9 @@
             this.Controls.Add(this.tb1);
             this.Controls.Add(this.pb1);
             this.Controls.Add(this.gb1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "TraversalGraph";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Обхід графа в глибину та ширину";
             this.gb1.ResumeLayout(false);
             this.gb3.ResumeLayout(false);
