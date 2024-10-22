@@ -10,7 +10,7 @@ namespace MLTA_LR_2
     {
         public int[,] undirectedGraph; 
         public int[,] directedGraph;    
-        string[] vertices = { "a", "b", "c", "d", "e", "f" }; // Вершини графа
+        string[] vertices = { "a", "b", "c", "d", "e", "f" }; 
 
         public void InitializeGraphs()
         {
@@ -37,7 +37,7 @@ namespace MLTA_LR_2
             };
         }
 
-        // Обхід у глибину (DFS) для неорієнтованого графа
+        // Обхід у глибину (DFS)
         public List<string> DFS(int[,] graph, int start)
         {
             Stack<int> stack = new Stack<int>();
@@ -65,7 +65,7 @@ namespace MLTA_LR_2
             return result;
         }
 
-        // Обхід у ширину (BFS) для неорієнтованого графа
+        // Обхід у ширину (BFS)
         public List<string> BFS(int[,] graph, int start)
         {
             Queue<int> queue = new Queue<int>();
