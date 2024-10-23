@@ -16,24 +16,23 @@ namespace MLTA_LR_2
         {
             InitializeComponent();
         }
-
-
         private void bt_DrawGraph_Click(object sender, EventArgs e)
         {
             if (OrientedGraph_cb.Checked)
             {
-                UndirectedGraph_cb.Checked = false; 
-                pb1.Image = new Bitmap("C:\\Users\\marjn\\source\\repos\\MLTA_LR_2\\orientedGraph.png");
+                UndirectedGraph_cb.Checked = false;
+                pb1.Image = Properties.Resources.orientedGraph; // Використання ресурсу
             }
             else if (UndirectedGraph_cb.Checked)
             {
-                pb1.Image = new Bitmap("C:\\Users\\marjn\\source\\repos\\MLTA_LR_2\\undirectedGraph.png");
+                pb1.Image = Properties.Resources.undirectedGraph; // Використання ресурсу
             }
             else
             {
-                pb1.Image = null; 
+                pb1.Image = null;
             }
         }
+
 
         private void OrientedGraph_cb_CheckedChanged(object sender, EventArgs e)
         {
@@ -97,11 +96,13 @@ namespace MLTA_LR_2
 
             if (OrientedGraph_cb.Checked)
             {
-                traversalResult = IsDFS_cb.Checked ? graphTraversal.DFS(graphTraversal.directedGraph, startVertex) : graphTraversal.BFS(graphTraversal.directedGraph, startVertex);
+                traversalResult = IsDFS_cb.Checked ? graphTraversal.DFS(graphTraversal.directedGraph, startVertex)
+                    : graphTraversal.BFS(graphTraversal.directedGraph, startVertex);
             }
             else
             {
-                traversalResult = IsDFS_cb.Checked ? graphTraversal.DFS(graphTraversal.undirectedGraph, startVertex) : graphTraversal.BFS(graphTraversal.undirectedGraph, startVertex);
+                traversalResult = IsDFS_cb.Checked ? graphTraversal.DFS(graphTraversal.undirectedGraph, startVertex)
+                    : graphTraversal.BFS(graphTraversal.undirectedGraph, startVertex);
             }
 
             tb1.Text = $"Обрано граф: {(OrientedGraph_cb.Checked ? "Орієнтований" : "Неорієнтований")}{Environment.NewLine}" +
